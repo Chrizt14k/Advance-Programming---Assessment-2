@@ -1,0 +1,71 @@
+START MealApp
+
+SETUP:
+1. Initialize the main application window:
+   - Set title, size, background color.
+   - Create and configure header frame with the title "Meal Finder".
+   
+2. Create search functionalities:
+   - Add search bar and buttons for "Search", "Random Meal", and "Search by First Letter".
+
+3. Add filter functionalities:
+   - Create dropdown to select filter type (Category, Area, Ingredient).
+   - Add input field and "Apply Filter" button.
+
+4. Display results:
+   - Use a Treeview to list meal results with columns: Meal, Category, Area.
+
+5. Add feature buttons:
+   - Buttons for "List Categories", "List Areas", and "List Ingredients".
+
+6. Include an area for displaying meal images.
+
+FUNCTIONALITIES:
+1. search_meal():
+   - Retrieve user input for meal name.
+   - Fetch meal data from API using the input.
+   - Display results or show a warning if no input is provided.
+
+2. search_by_first_letter():
+   - Retrieve user input for the first letter.
+   - Fetch meal data from API using the input.
+   - Display results or show a warning if input is invalid.
+
+3. get_random_meal():
+   - Fetch and display a random meal from the API.
+
+4. filter_meals():
+   - Retrieve filter type and input.
+   - Fetch meal data based on selected filter.
+   - Display results or show a warning if input is invalid.
+
+5. fetch_meals(url):
+   - Make a GET request to the provided URL.
+   - Parse the API response and populate the Treeview with meal details.
+   - Handle errors if the request fails.
+
+6. show_meal_details(event):
+   - Identify selected meal in the Treeview.
+   - Fetch detailed meal information from the API.
+   - Display meal details, including ingredients, instructions, and an image.
+
+7. list_categories():
+   - Fetch and display meal categories from the API.
+
+8. list_areas():
+   - Fetch and display meal areas from the API.
+
+9. list_ingredients():
+   - Fetch and display meal ingredients from the API.
+
+10. adjust_treeview_columns():
+    - Adjust column widths in the Treeview for better visibility.
+
+MAIN:
+1. Initialize the application:
+   - Create the main Tkinter window.
+   - Instantiate the MealApp class with the root window.
+   
+2. Run the main event loop.
+
+END
